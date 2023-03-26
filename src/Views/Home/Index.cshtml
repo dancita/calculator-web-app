@@ -1,0 +1,36 @@
+﻿@model CalculatorWebApp.Models.Calculation
+@{
+    ViewData["Title"] = "Calculator";
+}
+
+@using (Html.BeginForm("Index", "Home", FormMethod.Post)){
+    <body>
+        <form method="post">
+        <fieldset>
+            <legend>Let's calculate!</legend>
+            <div>
+                @Html.Label("firstNumber", "First Number")
+                @Html.TextBoxFor(m => m.FirstNumber)
+            </div>
+            <div>
+                @Html.Label("secondNumber", "Second Number")
+                @Html.TextBoxFor(m => m.SecondNumber)
+            </div>
+            <div>
+                @Html.RadioButtonFor(m => m.OperationType, "Multiply") @Html.Label("Multiply")
+                @Html.RadioButtonFor(m => m.OperationType, "Multiply") @Html.Label("Add")
+            </div>
+            <div>
+                <label>&nbsp;</label>
+                <input type="submit" value="Submit" class="submit" />
+            </div>
+            </fieldset>
+        </form>
+    </body>
+}
+
+<div>
+    @Html.Label("result", "Result")
+    @Html.TextBoxFor(m => m.Result)
+</div>
+    
