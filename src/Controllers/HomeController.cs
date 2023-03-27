@@ -7,13 +7,13 @@ namespace CalculatorWebApp.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            return View(new Calculation());
         }
 
         [HttpPost]
         public IActionResult Index(Calculation calculation)
         {
-            calculation.Result = calculation.FirstNumber + calculation.SecondNumber;
+            calculation.Result = calculation.NumbersList?.Sum();
             return View(calculation);
         }
     }

@@ -9,15 +9,14 @@
             <fieldset>
                 <legend>Let's calculate!</legend>
                 <div class="form-group">
-                    <div class="form-group">
-                        @Html.LabelFor(m => m.FirstNumber, new { @class = "control-label" })
-                        @Html.TextBoxFor(m => m.FirstNumber, new { @class = "form-control" })                       
-                        <small id="numberHelp" class="form-text text-muted">Number must be between 0 and 1.</small>
-                </div>
-                <div class="form-group">
-                    @Html.LabelFor(m => m.SecondNumber, new { @class = "control-label" })
-                    @Html.TextBoxFor(m => m.SecondNumber, new { @class = "form-control" }) 
-                    <small id="numberHelp" class="form-text text-muted">Number must be between 0 and 1.</small>
+                     @for(int i=0; i<Model.AmountOfNumbers; i++)
+                     {
+                        <div class="form-group">
+                            <label class="form-check-label">Number i</label>
+                            @Html.TextBoxFor(m => m.NumbersList[i], new { @class = "form-control" })                       
+                            <small id="numberHelp" class="form-text text-muted">Number must be between 0 and 1.</small>
+                        </div>
+                     }
                 </div>
                 <div class="form-group">
                     @foreach (var operationType in (CalculatorWebApp.Models.Calculation.OperationType[])Enum.GetValues(typeof(CalculatorWebApp.Models.Calculation.OperationType)))
