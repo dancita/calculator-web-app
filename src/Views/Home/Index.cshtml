@@ -19,15 +19,15 @@
                     @Html.TextBoxFor(m => m.SecondNumber, new { @class = "form-control" }) 
                     <small id="numberHelp" class="form-text text-muted">Number must be between 0 and 1.</small>
                 </div>
-                @foreach (var operationType in (CalculatorWebApp.Models.Calculation.OperationType[])Enum.GetValues(typeof(CalculatorWebApp.Models.Calculation.OperationType)))
-                {
-                    <div class="form-group">
+                <div class="form-group">
+                    @foreach (var operationType in (CalculatorWebApp.Models.Calculation.OperationType[])Enum.GetValues(typeof(CalculatorWebApp.Models.Calculation.OperationType)))
+                    {                   
                         <label class="form-check-label">
                             @Html.RadioButtonFor(m => m.Operation, (int)operationType, new { id = "" })
                             <span>@operationType</span>
                         </label>
-                    </div>
-                }
+                    }
+                </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </div>

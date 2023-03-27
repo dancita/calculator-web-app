@@ -1,7 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.Xml.Linq;
-
-namespace CalculatorWebApp.Models
+﻿namespace CalculatorWebApp.Models
 {
     public class Calculation
     {
