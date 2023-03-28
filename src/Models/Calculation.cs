@@ -18,8 +18,8 @@ namespace CalculatorWebApp.Models
 
         public enum OperationType
         {
-            Add,
-            Multiply
+            CombinedWith,
+            Either
         }
     }
 }
