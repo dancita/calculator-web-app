@@ -9,14 +9,18 @@
             <fieldset>
                 <legend>Let's calculate!</legend>
                 <div class="form-group">
-                     @for(int i=0; i<Model.AmountOfNumbers; i++)
-                     {
                         <div class="form-group">
-                            <label class="form-check-label">Number i</label>
-                            @Html.TextBoxFor(m => m.NumbersList[i], new { @class = "form-control" })                       
-                            <small id="numberHelp" class="form-text text-muted">Number must be between 0 and 1.</small>
+                            <label class="form-check-label">Number A</label>
+                            @Html.TextBoxFor(m => m.NumberA, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.NumberA, "", new { @class = "text-danger" })
                         </div>
-                     }
+                </div>
+                <div class="form-group">
+                    <div class="form-group">
+                        <label class="form-check-label">Number B</label>
+                        @Html.TextBoxFor(m => m.NumberB, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.NumberB, "", new { @class = "text-danger" })
+                    </div>
                 </div>
                 <div class="form-group">
                     @foreach (var operationType in (CalculatorWebApp.Models.Calculation.OperationType[])Enum.GetValues(typeof(CalculatorWebApp.Models.Calculation.OperationType)))
@@ -42,5 +46,3 @@
          @Html.TextBoxFor(m => m.Result, new { @class = "form-control" })
     </div>
 }
-
-    
