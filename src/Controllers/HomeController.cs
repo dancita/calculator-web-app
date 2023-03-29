@@ -1,18 +1,17 @@
 ﻿using CalculatorWebApp.Models;
 using Microsoft.AspNetCore.Mvc;
-using System.Numerics;
 
 namespace CalculatorWebApp.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        public ActionResult Index()
         {
             return View();
         }
 
         [HttpPost]
-        public IActionResult Index(Calculation calculation)
+        public ActionResult Index(Calculation calculation)
         {
             if (ModelState.IsValid)
             {
