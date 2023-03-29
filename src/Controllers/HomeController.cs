@@ -21,7 +21,7 @@ namespace CalculatorWebApp.Controllers
             return View(calculation);
         }
 
-        private decimal CalculateResult(Calculation calculation)
+        private static decimal CalculateResult(Calculation calculation)
         {
             var multiplyResult = Multiply(calculation.NumberA, calculation.NumberB);
             decimal result = 0;
@@ -42,7 +42,7 @@ namespace CalculatorWebApp.Controllers
             return numberA + numberB;
         }
 
-        private decimal Multiply(decimal numberA, decimal numberB)
+        private static decimal Multiply(decimal numberA, decimal numberB)
         {
             return numberA * numberB;
         }

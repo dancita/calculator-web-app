@@ -5,7 +5,7 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculatorWebApp", "src\CalculatorWebApp.csproj", "{311CD865-592F-4C79-BE30-CAEC6FE97B01}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorWebApp.Tests", "CalculatorWebApp.Tests\CalculatorWebApp.Tests.csproj", "{3207F1CD-5275-45BE-8449-A6D523E63A27}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorWebApp.Tests", "tests\CalculatorWebApp.Tests\CalculatorWebApp.Tests.csproj", "{3207F1CD-5275-45BE-8449-A6D523E63A27}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
