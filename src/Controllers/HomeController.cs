@@ -22,10 +22,10 @@ namespace CalculatorWebApp.Controllers
             return View(calculation);
         }
 
-        private long CalculateResult(Calculation calculation)
+        private decimal CalculateResult(Calculation calculation)
         {
             var multiplyResult = Multiply(calculation.NumberA, calculation.NumberB);
-            long result = 0;
+            decimal result = 0;
             switch (calculation.Operation)
             {
                 case Calculation.OperationType.CombinedWith:
@@ -38,12 +38,12 @@ namespace CalculatorWebApp.Controllers
             return result;
         }
 
-        private long Add(long numberA, long numberB)
+        private static decimal Add(decimal numberA, decimal numberB)
         {
             return numberA + numberB;
         }
 
-        private long Multiply(long numberA, long numberB)
+        private decimal Multiply(decimal numberA, decimal numberB)
         {
             return numberA * numberB;
         }
