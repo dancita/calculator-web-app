@@ -19,7 +19,7 @@ namespace CalculatorWebApp.Controllers
                 calculation.Result = Calculations.CalculateResult(calculation);
                 Logging.LogCalculation(calculation);
             }
-            else // ??
+            else
             {
                 calculation.Result = null;
             }

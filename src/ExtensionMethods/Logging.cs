@@ -1,5 +1,4 @@
 ﻿using CalculatorWebApp.Models;
-using System.Text;
 
 namespace CalculatorWebApp.ExtensionMethods
 {

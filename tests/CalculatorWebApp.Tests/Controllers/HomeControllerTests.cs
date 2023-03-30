@@ -15,8 +15,8 @@ namespace CalculatorWebApp.Tests.Controllers
         [InlineData(0, 0.29, 0)]
         [InlineData(0, 0, 0)]
         [InlineData(1, 1, 1)]
-        [InlineData(0, 1, 1)]
-        [InlineData(1, 0, 1)]
+        [InlineData(0, 1, 0)]
+        [InlineData(1, 0, 0)]
         [InlineData(0.9999999999, 0.2, 0.19999999998)]
         public void Index_ViewData_ValidInput_OperationCombinedWith_ReturnsAsExpected(decimal numberA, decimal numberB, decimal result)
         {
@@ -99,7 +99,7 @@ namespace CalculatorWebApp.Tests.Controllers
             var calculationResult = (Calculation)viewResult.ViewData.Model;
             Assert.Equal(0.1M, calculationResult.NumberA);
             Assert.Equal(0.2M, calculationResult.NumberB);
-            Assert.Equal(Calculation.OperationType.CombinedWith, calculationResult.Operation);
+            Assert.Equal(operationType, calculationResult.Operation);
             Assert.Null(calculationResult.Result);
         }
     }
