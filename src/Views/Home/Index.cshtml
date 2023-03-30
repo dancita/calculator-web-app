@@ -36,14 +36,15 @@
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
             </fieldset>
+            @if (Model != null && Model.Result != null)
+            {
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Result, new { @class = "control-label" })
+                    @Html.TextBoxFor(m => m.Result, new { @class = "form-control" })
+                </div>
+            }
         </form>
     </body>
 }
 
-@if(Model != null && Model.Result != null)
-{
-    <div class="form-group">
-         @Html.LabelFor(m => m.Result, new { @class = "control-label" })
-         @Html.TextBoxFor(m => m.Result, new { @class = "form-control" })
-    </div>
-}
+

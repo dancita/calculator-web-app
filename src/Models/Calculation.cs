@@ -14,6 +14,7 @@ namespace CalculatorWebApp.Models
 
         [Required(ErrorMessage = "An operation must be selected")]
         public OperationType? Operation { get; set; }
+
         public decimal? Result { get; set; }
 
         public enum OperationType
